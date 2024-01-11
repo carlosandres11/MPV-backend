@@ -6,13 +6,12 @@ import connectDB from "./config/db.js";
 import routerVeterinarian from "./routes/veterinarianRoutes.js";
 import routerPatients from "./routes/patientsRoutes.js";
 
+const app = express();
+app.use(express.json());
+
 dotenv.config();
 
 connectDB();
-
-const app = express();
-
-app.use(express.json());
 
 const allowedDomains = [process.env.FRONTEND_URL];
 
