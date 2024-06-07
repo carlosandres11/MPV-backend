@@ -13,8 +13,7 @@ dotenv.config();
 
 connectDB();
 
-// const allowedDomains = [process.env.FRONTEND_URL];
-const allowedDomains = ["http://localhost:5173"];
+const allowedDomains = [process.env.FRONTEND_URL];
 
 const corsOption = {
   origin: function (origin, callback) {
