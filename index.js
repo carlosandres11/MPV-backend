@@ -13,16 +13,8 @@ dotenv.config();
 
 connectDB();
 
-const allowedDomains = [process.env.FRONTEND_URL];
-
 const corsOption = {
-  origin: function (origin, callback) {
-    if (allowedDomains.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by cors"));
-    }
-  },
+  origin: "*",
 };
 
 app.use(cors(corsOption));
