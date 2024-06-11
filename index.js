@@ -21,8 +21,6 @@ app.use(
   })
 );
 
-app.use(cors(corsOption));
-
 app.use("/api/veterinarians", routerVeterinarian);
 app.use("/api/patients", routerPatients);
 
